@@ -12,7 +12,7 @@ var $SqlUpdateOpUserName = "UPDATE opeartors SET username = ? WHERE Id = ?";
 var $CheckIfCustAccExists = "SELECT 1 from customers WHERE username = ? LIMIT 1";
 var $CheckIfCustPassMatch = "SELECT 1 from customers WHERE username = ? and password = ? LIMIT 1";
 var $SqlUpdateCustPassword = "UPDATE customers SET customers.password = ? WHERE Id = ?";
-var $SqlUpdateCustUserName = "UPDATE customers SET username = ? WHERE accountId = ?";
+var $SqlUpdateCustUserName = "UPDATE customers SET username = ? WHERE accountId = ?"
 
 }
 
