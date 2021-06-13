@@ -36,24 +36,25 @@
     <title>Newpost</title>
     <!-- Favicon -->
 
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="icon" href="../assets/images/esinam.logo.png" type="image/x-icon" sizes="56x56" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="icon" href="../../assets/images/esinam.logo.png" type="image/x-icon" sizes="56x56" />
     <!--font-Google-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700,800" rel="stylesheet">
     <!-- Font-awesome css -->
-    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css">
     <!-- Animate css -->
-    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
     <!-- Magnific css -->
-    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
     <!-- Owl carousel css -->
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
     <!-- Bootstrap css -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <!-- Main style css -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <!-- responsive css -->
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
     <!--readmore jquery-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -75,13 +76,15 @@
 </head>
 
 
-<body style="background:url('../assets/images/aboutp.jpg') ">
+<body style="background:url('../../assets/images/aboutp.jpg') ">
+
 
     <div class="div-label-span div-margin-bottom-5px">
         <!-- Logo -->
         <div class="logo float-left tran4s" style="background-color:light;margin-top:-20px;padding:2%;">
                             <a href="index.php">
-                <img src="../assets/images/esinam.logo.png" width="200" alt="Logo" class="img-responsive">
+                <img src="../../assets/images/esinam.logo.png" width="200" alt="Logo" class="img-responsive">
+
             </a>
         </div>
 
@@ -98,7 +101,8 @@
             <div id="login-form">
                 <h2>Log In</h2>
                 <br>
-                <form id="form-login" action="Login.php" method="POST" class="form-group">
+                <form id="form-login" action="../../Helpers/Home/Login.php" method="POST" class="form-group">
+
                     <div>
                         <div id="div-error" style="color:red; font-size: 20px"></div>
 
@@ -111,7 +115,8 @@
                             <div>
                                 <span id="div-icon" class="glyphicon glyphicon-user div-icon" style="color:white">
                                     </span>
-                                <input id="txtUsername" name="username" placeholder="Username" autocomplete="off" oninput="Validate(this)" oninvalid="Validate(this)" required class="form-control txtboxes " />
+                                <input id="txtUsername" name="username" placeholder="Username" autocomplete="off" required class="form-control txtboxes " />
+
                                 <span id="span-error-msg" class="span-error-msg"></span>
                                 <span id="span-warning-msg" class="span-warning-msg"></span>
                             </div>
@@ -125,7 +130,8 @@
                             <div>
                                 <span id="div-icon1" class="glyphicon glyphicon-lock div-icon" style="color:white"> </span>
 
-                                <input id="txtPass" type="Password" name="password" data-id="1" pattern=".{6,}" title="6 or more characters" placeholder="Password" autocomplete="off" oninput="Validate0(this)" oninvalid="Validate0(this)" required class="form-control" />
+                                <input id="txtPass" type="Password" name="password" data-id="1" pattern=".{6,}" title="6 or more characters" placeholder="Password" autocomplete="off" required class="form-control" />
+
                                 <span id="span-error-msgp1" class="span-error-msg"></span>
                                 <span id="span-warning-msgp1" class="span-warning-msg"></span>
                             </div>
