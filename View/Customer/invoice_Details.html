@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .img-responsive {
+            height: auto;
+            width: auto;
+            max-height: 72px;
+            max-width: 200px;
+            vertical-align: top;
+            padding-top: 0%;
+        }
+
+        #login-form {
+            width: auto;
+            height: auto;
+            background-color: white;
+            padding-left: 50px;
+            border-radius: 25px;
+            border: 2px solid orange;
+            padding: 20px;
+        }
+    </style>
+    <!-- For Resposive Device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Login</title>
+    <!-- Favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Newpost</title>
+    <!-- Favicon -->
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="icon" href="../assets/images/esinam.logo.png" type="image/x-icon" sizes="56x56" />
+    <!--font-Google-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700,800" rel="stylesheet">
+    <!-- Font-awesome css -->
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <!-- Magnific css -->
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <!-- Owl carousel css -->
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Main style css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link href="../../assets/css/theme.css" rel="stylesheet" media="all">
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+    <!--readmore jquery-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var Message = getParamByName('msg');
+            var diverror = document.getElementById('div-error');
+            diverror.innerHTML = Message;
+        });
+
+        function getParamByName(name) {
+            name = name.replace(/[\[]/, "\\[");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+    </script>
+
+</head>
+
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop4">
+            <div class="container">
+                <div class="header4-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="images/icon/logo-blue.png" alt="CoolAdmin" />
+                        </a>
+                    </div>
+                    <div class="header__tool">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP -->
+
+        <!-- WELCOME-->
+        <section class="welcome2 p-t-40 p-b-55">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="au-breadcrumb3">
+                            <div class="au-breadcrumb-left">
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="welcome2-inner m-t-60">
+                            <div class="welcome2-greeting">
+                                <h1 class="title-6">Hi
+                                    <span>John</span>, Welcome back
+                                </h1>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END WELCOME-->
+        
+
+        <!-- PAGE CONTENT-->
+        <div class="page-container3">
+            <br>
+            <br>
+            <br>
+            <section>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-xl-9">
+                            <!-- PAGE CONTENT-->
+                            <div class="page-content">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <!-- RECENT REPORT-->
+                                        <div class="recent-report3 m-b-40">
+                                            <div class="title-wrap">
+                                                <h3 class="title-3">Customer Invoices</h3>
+                                            </div>
+                                            <button type="button" class="btn btn-primary btn-md">Make Payment</button>
+                                            <br>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <!-- DATA TABLE-->
+                                                    <div class="table-responsive m-b-40">
+                                                        <table class="table table-borderless table-data3">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Customer</th>
+                                                                    <th>description</th>
+                                                                    <th>Date</th>
+                                                                    <th>Amount</th>
+                                                                    
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Apelele</td>
+                                                                    <td>Office Supplies</td>
+                                                                    <td>20 July 2020</td>
+                                                                    <td>R 20 000</td>
+                                                                    
+                                                                </tr>
+                                                             
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- END DATA TABLE                  -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END RECENT REPORT-->
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <!-- CHART PERCENT-->
+                                        <div class="chart-percent-3 m-b-40">
+                                            <h3 class="title-3 m-b-25">Operator Actions</h3>
+                                            <div class="chart-note m-b-5">
+                                                <span class="dot dot--blue"></span>
+                                                <span><button type="button" class="btn btn-primary btn-sm">Manage Customer</button></span>
+                                            </div>
+                                            <div class="chart-note">
+                                                <span class="dot dot--red"></span>
+                                                <span>services</span>
+                                            </div>
+                                            <div class="chart-wrap m-t-60">
+                                                <canvas id="percent-chart2"></canvas>
+                                            </div>
+                                        </div>
+                                        <!-- END CHART PERCENT-->
+                                    </div>
+                                </div>
+                                
+                                
+                                </div>
+                            </div>
+                            <!-- END PAGE CONTENT-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- END PAGE CONTENT  -->
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
