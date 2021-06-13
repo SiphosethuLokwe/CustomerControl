@@ -40,14 +40,6 @@ if($msg != ''){
     try
     {
         $Conn = new Connection();
-        if(isset($Conn))
-        {
-            echo "true";
-        }
-        else
-        {
-            echo"false";
-        }
         $Comm = new Command();
         $acc_datamapper = new OperatorController();
         $exist = $acc_datamapper->Exist($username,$Conn,$Comm);
@@ -64,7 +56,6 @@ if($msg != ''){
                  }
                      else
                      {
-                        echo "true";
 
                         $msg = $msg.'msg=Incorrect username or password';
                         header('Location:'.$loginurl.'?'.$msg);
