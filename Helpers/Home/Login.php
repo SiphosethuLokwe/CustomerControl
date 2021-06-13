@@ -61,6 +61,7 @@ if($msg != ''){
                      {
 
 
+
                         $msg = $msg.'msg=Incorrect username or password';
                         header('Location:'.$loginurl.'?'.$msg);
 
