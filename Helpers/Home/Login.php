@@ -16,12 +16,14 @@ include ('../../Model/Db/Connection.php');
 include ('../../Model/Db/Command.php');
 include ('../../Model/Operators.php');
 include ('../../Controller/OperatorController.php');
+
 ?>
 
 <?php
 if(isset($_POST['signin'])){
 $msg = '';
  $loginurl = '../../View/Home/Login.html';
+
 $validate = new Validate();
 
 if($validate->UsernameMissing()){
@@ -50,6 +52,7 @@ if($msg != ''){
         }
         $Comm = new Command();
         $acc_datamapper = new OperatorController();
+
         $exist = $acc_datamapper->Exist($username,$Conn,$Comm);
         if($exist)
         { 
@@ -65,6 +68,7 @@ if($msg != ''){
                      else
                      {
                         echo "true";
+
 
                         $msg = $msg.'msg=Incorrect username or password';
                         header('Location:'.$loginurl.'?'.$msg);
