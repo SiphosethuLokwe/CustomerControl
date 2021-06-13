@@ -12,16 +12,16 @@ Session_Start();
 
 <?php
 // INCLUDES
-include ('models/DAL/Connection.php');
-include ('models/DAL/Command.php');
-include ('models/account.php');
-include ('models/DAL/AccountDataMapper.php');
+include ('../../Model/Db/Connection.php');
+include ('../../Model/Db/Command.php');
+include ('../../Model/Operators.php');
+include ('../../Controller/OperatorController.php');
 ?>
 
 <?php
 if(isset($_POST['signin'])){
 $msg = '';
- $loginurl = 'Location: Login.html';
+ $loginurl = '../../View/Home/Login.html';
 $validate = new Validate();
 
 if($validate->UsernameMissing()){
@@ -49,7 +49,7 @@ if($msg != ''){
             echo"false";
         }
         $Comm = new Command();
-        $acc_datamapper = new AccountDataMapper();
+        $acc_datamapper = new OperatorController();
         $exist = $acc_datamapper->Exist($username,$Conn,$Comm);
         if($exist)
         { 
@@ -60,10 +60,12 @@ if($msg != ''){
                         $_SESSION['user'] = $username;
                          $_SESSION['password'] =$password;
                       
-                          header('Location:AllPost.php');
+                          header('Location:../../View/Operator/Details.html');
                  }
                      else
                      {
+                        echo "true";
+
                         $msg = $msg.'msg=Incorrect username or password';
                         header('Location:'.$loginurl.'?'.$msg);
 
