@@ -12,6 +12,7 @@ Session_Start();
 
 <?php
 // INCLUDES
+include ('../../Controller/CustomerController.php');
 include ('../../Model/Db/Connection.php');
 include ('../../Model/Db/Command.php');
 include ('../../Model/Operators.php');
@@ -43,19 +44,21 @@ if($msg != ''){
     {
         $Conn = new Connection();
         $Comm = new Command();
-        $acc_datamapper = new OperatorController();
+        $operator_acc = new OperatorController();
+        $customer_acc =  new CustomerController();
 
-        $exist = $acc_datamapper->Exist($username,$Conn,$Comm);
+        $cust_acc_exist = $customer_acc->Exist($username,$Conn,$Comm);
+        $exist = $operator_acc->Exist($username,$Conn,$Comm);
         if($exist)
         { 
            // Check if password is correct
-                    if($acc_datamapper->PasswordMatch($username, $password, $Conn, $Comm))
+                  if($operator_acc->PasswordMatch($username, $password, $Conn, $Comm))
                  { 
                 //         // TODO: Redirect to profile
                         $_SESSION['user'] = $username;
                          $_SESSION['password'] =$password;
                       
-                          header('Location:../../View/Operator/Details.html');
+                          header('Location:../../View/Operator/Home.html');
                  }
                      else
                      {
@@ -67,6 +70,29 @@ if($msg != ''){
                      }
 
         }
+        else if ( $cust_acc_exist)
+        {
+            Echo "true";
+            // Check if password is correct
+                    if($customer_acc->PasswordMatch($username, $password, $Conn, $Comm))
+                 { 
+                //         // TODO: Redirect to profile
+                        $_SESSION['user'] = $username;
+                         $_SESSION['password'] =$password;
+                      
+                          header('Location:../../View/Customer/Home.html');
+                 }
+                     else
+                     {
+
+
+                        $msg = $msg.'msg=Incorrect username or password';
+                        header('Location:'.$loginurl.'?'.$msg);
+
+                     }
+
+        }
+        
         else
         {
             // Check if is confirmed
