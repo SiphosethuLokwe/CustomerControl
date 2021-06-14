@@ -10,7 +10,7 @@ var $password;
 var $balance;
 
 
-public function _construct($Id,$name,$address,$dateCreated,$username,$password,$balance)
+public function _construct($name,$address,$dateCreated,$username,$password,$balance)
 {
         $this->Id=$Id;
         $this->name=$name;
@@ -40,7 +40,7 @@ public function getName()
   return $this->name;
 }
 
-public function setNam($param)
+public function setName($param)
 {
   $this->name=$param;
 }

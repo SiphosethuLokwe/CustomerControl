@@ -9,6 +9,8 @@ var $SqlUpdateOpUserName = "UPDATE opeartors SET username = ? WHERE Id = ?";
 
 
 //customers
+var $SqlInsertCustomer = "INSERT INTO customers(name, address, username, password, date_created, balance) 
+VALUES(:name, :address,:username, :password, :datecreated, :balance )";
 var $CheckIfCustAccExists = "SELECT 1 from customers WHERE username = ? LIMIT 1";
 var $CheckIfCustPassMatch = "SELECT 1 from customers WHERE username = ? and password = ? LIMIT 1";
 var $SqlUpdateCustPassword = "UPDATE customers SET customers.password = ? WHERE Id = ?";

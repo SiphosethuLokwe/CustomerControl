@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Newpost</title>
     <!-- Favicon -->
+    <link rel="stylesheet" href="../../Model/customers.php">
 
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="icon" href="../assets/images/esinam.logo.png" type="image/x-icon" sizes="56x56" />
@@ -83,7 +84,7 @@
         <!-- Logo -->
         <div class="logo float-left tran4s" style="background-color:light;margin-top:-20px;padding:2%;">
                             <a href="index.php">
-                <img src="../assets/images/esinam.logo.png" width="200" alt="Logo" class="img-responsive">
+                <img src="../../assets/images/esinam.logo.png" width="200" alt="Logo" class="img-responsive">
             </a>
         </div>
 
@@ -94,13 +95,15 @@
 
     <div id="form-container">
 
-
         <div class="container">
+            <span><a type="button" class="btn btn-primary btn-sm" href="../Operator/home.html">Back</a></span>
+            <br>
+            <br>
 
             <div id="login-form">
                 <h2>Add Customer</h2>
                 <br>
-                <form id="form-login" action="Login.php" method="POST" class="form-group">
+                <form id="form-login" action="../../Helpers/Operator/OperatorHelper.php" method="POST" class="form-group">
                     <div>
                         <div id="div-error" style="color:red; font-size: 20px"></div>
 
@@ -113,7 +116,7 @@
                             <div>
                                 <span id="div-icon" class="glyphicon glyphicon-user div-icon" style="color:white">
                                     </span>
-                                <input id="txtUsername" name="username" placeholder="Username" autocomplete="off" oninput="Validate(this)" oninvalid="Validate(this)" required class="form-control txtboxes " />
+                                <input id="txtUsername" name="name" placeholder="Customer name" autocomplete="off"  required class="form-control txtboxes " />
                                 <span id="span-error-msg" class="span-error-msg"></span>
                                 <span id="span-warning-msg" class="span-warning-msg"></span>
                             </div>
@@ -127,23 +130,12 @@
                             <div>
                                 <span id="div-icon" class="glyphicon glyphicon-user div-icon" style="color:white">
                                     </span>
-                                <input id="txtUsername" name="username" placeholder="Username" autocomplete="off" oninput="Validate(this)" oninvalid="Validate(this)" required class="form-control txtboxes " />
+                                <input id="txtUsername" name="address" placeholder="address" autocomplete="off" required class="form-control txtboxes " />
                                 <span id="span-error-msg" class="span-error-msg"></span>
                                 <span id="span-warning-msg" class="span-warning-msg"></span>
                             </div>
                         </div>
-                        <div class="div-margin-bottom-5px">
-                            <div class="div-label-span div-margin-bottom-5px">
-                                <h4>Date Created</h4>
-                            </div>
-                            <div>
-                                <span id="div-icon" class="glyphicon glyphicon-user div-icon" style="color:white">
-                                    </span>
-                                <input id="txtUsername" name="username" placeholder="Username" autocomplete="off" oninput="Validate(this)" oninvalid="Validate(this)" required class="form-control txtboxes " />
-                                <span id="span-error-msg" class="span-error-msg"></span>
-                                <span id="span-warning-msg" class="span-warning-msg"></span>
-                            </div>
-                        </div>
+                        
                         <div class="div-margin-bottom-5px">
                             <div class="div-label-span div-margin-bottom-5px">
                                 <h4>Username</h4>
@@ -175,7 +167,7 @@
                             <div>
                                 <span id="div-icon" class="glyphicon glyphicon-user div-icon" style="color:white">
                                     </span>
-                                <input id="txtUsername" name="username" placeholder="Username" autocomplete="off" oninput="Validate(this)" oninvalid="Validate(this)" required class="form-control txtboxes " />
+                                <input id="txtUsername" name="balance" placeholder="Username" autocomplete="off" oninput="Validate(this)" oninvalid="Validate(this)" required class="form-control txtboxes " />
                                 <span id="span-error-msg" class="span-error-msg"></span>
                                 <span id="span-warning-msg" class="span-warning-msg"></span>
                             </div>
@@ -183,7 +175,7 @@
                         <br>
                         <br>
                         <div class="div-margin-bottom-5px">
-                            <input id="btnFindAccount" type="submit" class="btnStyle btnWidth btn btn-warning" value="Add Customer" name="signin" />
+                            <input id="btnFindAccount" type="submit" class="btnStyle btnWidth btn btn-warning" value="addcustomer" name="addcustomer" />
                         </div>
                       
                         <div>
