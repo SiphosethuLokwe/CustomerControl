@@ -1,16 +1,37 @@
 <?php
-
+include ('../../Model/Db/errorlogger.php');
 class CustomerController{
 
     public function _construct(){}
 
-    public function Save($Account,$Conn,$Comm){
+    public function SaveCustomerDetails2($name,$address,$username,$password,$datecreated,$balance,$Conn,$Comm){
         try{
-            $stmt = $Conn->Connect()->prepare($Comm->SqlInsertAccount);
-            $stmt->execute(['lastUpdate' => $Account->lastUpdate
-                , 'lastUpdate' => $Account->LastUpdate
-                , 'username' => $Account->UserName
-                , 'password' => $Account->Password]);
+            $stmt = $Conn->Connect()->prepare($Comm->SqlInsertCustomer);
+            $stmt->execute(['name' => $name
+                , 'address' => $address
+                , 'username' => $username
+                , 'password' => $password
+                ,'datecreated'=>$datecreated
+                ,'balance'=>$balance]);
+                $id = $Conn->lastInsertId();
+                return $id;
+        }catch(PDOException $e){
+            $Error = new errorlogger();
+            echo $e->getMessage();
+            $Error->GetErrorInfo($e->getMessage());
+            return 0;
+        }
+    }
+
+    public function SaveCustomerDetails($customer,$Conn,$Comm){
+        try{
+            $stmt = $Conn->Connect()->prepare($Comm->SqlInsertCustomer);
+            $stmt->execute(['name' => $customer->name
+                , 'address' => $customer->address
+                , 'username' => $customer->username
+                , 'password' => $customer->password
+                ,'datecreated'=>$customer->dateCreated
+                ,'balance'=>$customer->balance]);
                 $id = $Conn->lastInsertId();
                 return $id;
         }catch(PDOException $e){

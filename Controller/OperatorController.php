@@ -1,5 +1,4 @@
 <?php
-include ('../../Model/Db/errorlogger.php');
 
 class OperatorController{
 
