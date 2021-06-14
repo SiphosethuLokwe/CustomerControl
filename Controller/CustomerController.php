@@ -1,5 +1,6 @@
 <?php
 include ('../../Model/Db/errorlogger.php');
+
 class CustomerController{
 
     public function _construct(){}
@@ -32,6 +33,7 @@ class CustomerController{
                 , 'password' => $customer->password
                 ,'datecreated'=>$customer->dateCreated
                 ,'balance'=>$customer->balance]);
+
                 $id = $Conn->lastInsertId();
                 return $id;
         }catch(PDOException $e){
